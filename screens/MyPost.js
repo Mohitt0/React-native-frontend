@@ -7,27 +7,23 @@ import PostCard from "../components/PostCard.js";
 
 const MyPost = () => {
   const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [state] = useContext(AuthContext);
-  const {token} = state 
+  const { token } = state;
   const getmyPost = async () => {
     try {
-      setLoading(true);
-      const { data } = await axios.get(
-        "/post/get-user-post",
-        {
-          headers: {
-            Authorization: `Bearer ${token && token}`,
-          },
-        }
-      );
+      const { data } = await axios.get("/post/get-user-post", {
+        headers: {
+          Authorization: `Bearer ${token && token}`,
+        },
+      });
 
       setLoading(false);
 
       setPosts(data?.userPost);
     } catch (err) {
-      setLoading(false);
-    
+      setLoading(true);
+
       alert(err);
     }
   };
@@ -38,7 +34,13 @@ const MyPost = () => {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <PostCard posts={posts} myPostScreen={true}/>
+        <View style={{ margin: 10 }}>
+          {loading && loading === true ? (
+            <Text style={{ textAlign: "center" }}>Loading...</Text>
+          ) : (
+            <PostCard posts={posts} myPostScreen={true} />
+          )}
+        </View>
       </ScrollView>
       <View style={{ backgroundColor: "#ffffff" }}>
         <FooterMenu />

@@ -20,7 +20,7 @@ export default function Home() {
     <View style={styles.container}>
       <ScrollView refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh}/>}>
         <View style={{ margin: 10 }}>
-          <PostCard posts={posts} />
+          <PostCard posts={posts} userIcon={true}/>
         </View>
       </ScrollView>
       <View style={{ backgroundColor: "#ffffff" }}>

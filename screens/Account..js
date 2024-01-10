@@ -94,7 +94,7 @@ export default function Account() {
           </TouchableOpacity>
         </View>
       </ScrollView>
-      <View style={{ flex: 1, justifyContent: "flex-end" }}>
+      <View style={{  backgroundColor:"#ffff" }}>
         <FooterMenu />
       </View>
     </View>
@@ -106,7 +106,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "space-between",
     marginTop: 40,
-    margin: 10,
   },
   waringText: {
     color: "red",

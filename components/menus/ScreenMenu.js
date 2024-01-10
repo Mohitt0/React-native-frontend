@@ -16,7 +16,7 @@ export default function ScreenMenu() {
   const Authenticated = state?.user && state?.token;
   const Stack = createNativeStackNavigator();
   return (
-    <Stack.Navigator initialRouteName="Login">
+    <Stack.Navigator screenOptions={{animation:"none"}} initialRouteName="Login">
       {Authenticated ? (
         <>
           <Stack.Screen

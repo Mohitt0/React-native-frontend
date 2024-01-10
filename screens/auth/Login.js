@@ -67,12 +67,12 @@ export default function Login({ navigation }) {
         handleSubmit={handleSubmit}
       />
       <Text style={style.linkText}>
-        Not a user?{" "}
+        Don't have an account?{" "}
         <Text
           onPress={() => navigation.navigate("Register")}
           style={style.link}
         >
-          REGISTER
+          Sign up
         </Text>
       </Text>
     </View>
@@ -82,10 +82,10 @@ const style = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "#e1d5c9",
+    backgroundColor: "white",
   },
   pageTitle: {
-    fontSize: 40,
+    fontSize: 25,
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 20,

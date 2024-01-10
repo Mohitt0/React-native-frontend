@@ -86,7 +86,7 @@ const PostCard = ({ posts, myPostScreen }) => {
           <Text style={styles.title}>Title : {post?.title}</Text>
           <Text>Description : {post?.description}</Text>
           <View style={styles.footer}>
-            {posts?.postedBy?.name && (
+            {post?.postedBy?.name && (
               <Text>
                 {""}
                 <FontAwesome5 color={"orange"} name="user" />{" "}

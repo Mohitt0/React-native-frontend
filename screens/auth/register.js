@@ -32,7 +32,7 @@ export default function Register({ navigation }) {
   };
   return (
     <View style={style.container}>
-      <Text style={style.pageTitle}>Register</Text>
+      <Text style={style.pageTitle}>Create Account</Text>
       <View style={{ marginHorizontal: 20 }}>
         <InputBox title={"NAME"} value={name} setValue={setName} />
         <InputBox
@@ -56,9 +56,9 @@ export default function Register({ navigation }) {
         handleSubmit={handleSubmit}
       />
       <Text style={style.linkText}>
-        Already register?{" "}
+        Already have an account?{" "}
         <Text onPress={() => navigation.navigate("Login")} style={style.link}>
-          LOGIN
+          Sign in
         </Text>
       </Text>
     </View>
@@ -69,10 +69,10 @@ const style = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "#e1d5c9",
+    backgroundColor: "white",
   },
   pageTitle: {
-    fontSize: 40,
+    fontSize: 25,
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 20,
